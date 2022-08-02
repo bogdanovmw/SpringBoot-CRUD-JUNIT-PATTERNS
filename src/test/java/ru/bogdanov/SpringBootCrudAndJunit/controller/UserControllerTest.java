@@ -1,19 +1,17 @@
 package ru.bogdanov.SpringBootCrudAndJunit.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
-import ru.bogdanov.SpringBootCrudAndJunit.service.UserServiceImpl;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.controller.UserController;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.service.UserServiceImpl;
 
 import java.util.Arrays;
 import java.util.List;

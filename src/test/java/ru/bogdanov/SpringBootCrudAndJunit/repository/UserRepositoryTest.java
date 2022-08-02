@@ -9,7 +9,8 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,24 +20,24 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class UserRepositoryTest {
+class UserRepositoryTest {
     @Autowired
     private UserRepository userRepository;
 
     @Test
     @Order(1)
     @Rollback
-    public void testCreateUser() {
+    void testCreateUser() {
         User user = new User();
         user.setName("Max Bogdanov");
 
         User savedUser = userRepository.save(user);
-        assertThat(savedUser.getId()).isGreaterThan(0);
+        assertThat(savedUser.getId()).isPositive();
     }
 
     @Test
     @Order(2)
-    public void testUpdateUser() {
+    void testUpdateUser() {
         User user = userRepository.findById(9L).get();
         user.setName("Max Ivanov");
 
@@ -60,14 +61,14 @@ public class UserRepositoryTest {
 
     @Test
     @Order(4)
-    public void tesGetAllUsers() {
+    void tesGetAllUsers() {
         List<User> users = userRepository.findAll();
         assertThat(users.size()).isGreaterThan(0);
     }
 
     @Test
     @Order(5)
-    public void testGetUserById() {
+    void testGetUserById() {
         User user = userRepository.findById(9L).get();
         assertThat(user.getId()).isEqualTo(9L);
     }

@@ -1,9 +1,9 @@
-package ru.bogdanov.SpringBootCrudAndJunit.service;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.service;
 
 import org.springframework.stereotype.Service;
-import ru.bogdanov.SpringBootCrudAndJunit.exceptions.UserNotFoundException;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
-import ru.bogdanov.SpringBootCrudAndJunit.repository.UserRepository;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.exceptions.UserNotFoundException;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.repository.UserRepository;
 
 import java.util.List;
 

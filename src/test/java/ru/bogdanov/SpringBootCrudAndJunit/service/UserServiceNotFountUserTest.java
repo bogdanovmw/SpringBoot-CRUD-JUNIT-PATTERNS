@@ -5,8 +5,9 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
-import ru.bogdanov.SpringBootCrudAndJunit.repository.UserRepository;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.repository.UserRepository;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.service.UserServiceImpl;
 
 import java.util.Optional;
 
@@ -27,19 +28,19 @@ public class UserServiceNotFountUserTest {
     // Генерируем исключение, если пользователь не существует
     @Test(expected = RuntimeException.class)
     public void testUpdateUserIfNotFound() {
-        given(userRepository.findById(anyLong())).willReturn(Optional.ofNullable(null));
+        given(userRepository.findById(anyLong())).willReturn(Optional.empty());
         userService.updateUser(user.getId(), newUser);
     }
 
     @Test(expected = RuntimeException.class)
     public void testDeleteUserIfNotFound() {
-        given(userRepository.findById(anyLong())).willReturn(Optional.ofNullable(null));
+        given(userRepository.findById(anyLong())).willReturn(Optional.empty());
         userService.deleteUser(user.getId());
     }
 
     @Test(expected = RuntimeException.class)
     public void testGetUserByIdIfNotFount() {
-        given(userRepository.findById(anyLong())).willReturn(Optional.ofNullable(null));
+        given(userRepository.findById(anyLong())).willReturn(Optional.empty());
         userService.getUserById(user.getId());
     }
 }

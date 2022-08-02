@@ -6,8 +6,9 @@ import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
-import ru.bogdanov.SpringBootCrudAndJunit.repository.UserRepository;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.repository.UserRepository;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.service.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +36,6 @@ public class UserServiceTest {
         when(userRepository.save(ArgumentMatchers.any(User.class))).thenReturn(user);
 
         User created = userService.createUser(user);
-
         assertThat(created.getName()).isSameAs(user.getName());
 
         verify(userRepository).save(user);
@@ -45,9 +45,9 @@ public class UserServiceTest {
     public void testUpdateUserIfFound() {
         given(userRepository.findById(user.getId())).willReturn(Optional.of(user));
 
-        userService.updateUser(user.getId(), newUser);
+        userService.updateUser(this.user.getId(), newUser);
 
-        verify(userRepository).findById(user.getId());
+        verify(userRepository).findById(this.user.getId());
         verify(userRepository).save(newUser);
     }
 

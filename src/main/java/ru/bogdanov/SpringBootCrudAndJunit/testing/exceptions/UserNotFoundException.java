@@ -1,4 +1,4 @@
-package ru.bogdanov.SpringBootCrudAndJunit.exceptions;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(Long id) {

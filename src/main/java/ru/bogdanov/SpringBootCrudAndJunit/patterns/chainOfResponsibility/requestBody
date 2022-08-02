@@ -1,0 +1,23 @@
+{
+    "id": "1",
+    "fio": "Bogdanov Maxim",
+    "address": "Lenina 56 - 4",
+    "phoneNumber": "89023423421",
+    "products": [
+        {
+            "id": "1",
+            "name": "Name 1",
+            "insurance": true,
+            "testing": true,
+            "festivePackaging": true
+        },
+        {
+            "id": "2",
+            "name": "Name 2",
+            "insurance": true,
+            "testing": false,
+            "festivePackaging": true
+        }
+    ],
+    "smsNotification": false
+}

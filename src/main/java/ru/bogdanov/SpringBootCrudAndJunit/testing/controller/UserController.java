@@ -1,11 +1,11 @@
-package ru.bogdanov.SpringBootCrudAndJunit.controller;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ru.bogdanov.SpringBootCrudAndJunit.model.User;
-import ru.bogdanov.SpringBootCrudAndJunit.service.UserService;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
+import ru.bogdanov.SpringBootCrudAndJunit.testing.service.UserService;
 
 import java.net.URI;
 import java.util.List;
