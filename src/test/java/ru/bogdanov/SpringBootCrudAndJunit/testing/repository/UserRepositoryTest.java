@@ -1,4 +1,4 @@
-package ru.bogdanov.SpringBootCrudAndJunit.repository;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.repository;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

@@ -1,4 +1,4 @@
-package ru.bogdanov.SpringBootCrudAndJunit.controller;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;

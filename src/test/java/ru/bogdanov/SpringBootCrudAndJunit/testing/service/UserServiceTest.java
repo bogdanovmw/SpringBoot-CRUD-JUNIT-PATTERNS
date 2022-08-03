@@ -1,4 +1,4 @@
-package ru.bogdanov.SpringBootCrudAndJunit.service;
+package ru.bogdanov.SpringBootCrudAndJunit.testing.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

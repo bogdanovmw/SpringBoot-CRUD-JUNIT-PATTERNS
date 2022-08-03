@@ -29,7 +29,7 @@ public class CacheService {
     }
 
 //    @CacheEvict(value = "data", allEntries = true)
-      @CacheEvict("data")
+    @CacheEvict("data")
     public void clear() {
 
     }
