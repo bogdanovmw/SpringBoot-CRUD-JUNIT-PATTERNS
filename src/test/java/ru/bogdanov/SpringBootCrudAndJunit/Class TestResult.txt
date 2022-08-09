@@ -1,0 +1,12 @@
+TestResult - Хранит результаты выполнения тестовых случаев.  Он отличает failures (сбои) и errors (ошибки).  Сбои ожидаются и проверяются с помощью утверждений. Ошибки же, в свою очередь, не ожидаются (например, OutOfMemoryError).
+Методы:
+void addError(Test test, Throwable t) - Добавляет ошибку в список ошибок
+void addFailure(Test test, AssertionFailedError t) - Добавялет сбой в список сбоев
+void endTest(Test test) - Выводит результаты завершённых тестов
+int errorCount() - Возвращает количество обнаруженных ошибок
+Enumeration<TestFailure> errors() - Возвращает перечисление для ошибок
+int failureCount() - Возвращает количество обнаруженных сбоев
+void run(TestCase test) - Запускает TestCase
+int runCount() - Возвращает количество запущенных тестов
+void startTest(Test test) - Выводит результат теста, который передаётся в параметре
+void stop() - Останавливает запущенный тест

@@ -1,0 +1,20 @@
+TestSuite - Набор тестов. Представляет собой группу тестов, которые могут быть запущены вместе.
+Методы:
+void addTest(Test test) - Добавляет тест в suite
+void addTestSuite(Class<? extends TestCase> testClass) - Добавляет тесты из указанного тестового класса
+int countTestCases() - Возвращает количество тестовых случаев, которые будут запущены в данном тесте
+String getName() - Возвращает имя suite
+void run(TestResult result) - Запускает тесты и записывает их результаты в TestResult
+void setName(String name) - Указывает имя suite
+Test testAt(int index) - Возвращает тест с указанным индексом
+int testCount() - Возвращает количество тестов в данном сьюте.
+static Test warning(String message) - Возвращает тест, который не пройдёт и выводит сообщение
+
+
+@RunWith(Suite.class)
+@Suite.SuiteClasses({
+   TestJunit1.class,
+   TestJunit2.class
+})
+public class JunitTestSuite {
+}
