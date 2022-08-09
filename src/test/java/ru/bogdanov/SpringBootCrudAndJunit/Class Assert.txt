@@ -1,0 +1,12 @@
+Assert - Набор методов-утверждений. Записываются только те утверждения, которые оказываются ложными (false)
+Методы:
+void assertEquals(boolean expected, boolean actual) - Проверяет, равенство значений двух примитивных типов данных
+void assertTrue (логическое условие) - Проверяет, что условие верно.
+void assertFalse(boolean condition) - Проверяет, является ли утверждение ложным
+void assertNotNull(Object object) - Проверяет, что объект на является null
+void assertNull(Object object) - Проверяет, что данный объект не является типом null
+void assertTrue(boolean condition) - Проверяет, что указанное выражение является истинным (true)
+void fail() - Проваливает тест без вывода сообщений
+void assertSame (object1, object2) - Метод assertSame () проверяет, указывают ли две ссылки на один и тот же объект.
+void assertNotSame (object1, object2) - Метод assertNotSame () проверяет, не ссылаются ли две ссылки на один и тот же объект.
+void assertArrayEquals (pectedArray, resultArray); - Метод assertArrayEquals () проверит, равны ли два массива друг другу.

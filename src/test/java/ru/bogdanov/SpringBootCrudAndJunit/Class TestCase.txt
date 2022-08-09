@@ -1,0 +1,10 @@
+TestCase - Определяет каркас для выполнения тестов (fixtures)
+Методы:
+int countTestCases() - Возвращает количество выполнняемых тестовых случаев (test cases)
+TestResult createResult() - Создаёт экземпялр класса TestResult по умолчанию
+String getName() - Вовращает имя тестового случая
+TestResult run() - Выполняет тест, собирая результаты с помощью стандартного объекта TestResult
+void run(TestResult result) - Выполняет тестовый случай и собирает результаты в экземпляре TestResult
+void setName(String name) - Задаёт имя тестовому случаю
+void setUp() - Устанавливает каркас (fixture), например, открывает сетевое соединение
+void tearDown() - Уничтожает каркас (fixture), например, закрывает сетевое соединение
