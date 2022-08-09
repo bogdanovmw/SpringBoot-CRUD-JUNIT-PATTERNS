@@ -8,7 +8,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import ru.bogdanov.SpringBootCrudAndJunit.testing.model.User;
 import ru.bogdanov.SpringBootCrudAndJunit.testing.repository.UserRepository;
-import ru.bogdanov.SpringBootCrudAndJunit.testing.service.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;

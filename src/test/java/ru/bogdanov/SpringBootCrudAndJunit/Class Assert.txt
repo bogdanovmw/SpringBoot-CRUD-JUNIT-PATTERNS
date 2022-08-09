@@ -10,3 +10,9 @@ void fail() - Проваливает тест без вывода сообщен
 void assertSame (object1, object2) - Метод assertSame () проверяет, указывают ли две ссылки на один и тот же объект.
 void assertNotSame (object1, object2) - Метод assertNotSame () проверяет, не ссылаются ли две ссылки на один и тот же объект.
 void assertArrayEquals (pectedArray, resultArray); - Метод assertArrayEquals () проверит, равны ли два массива друг другу.
+void assertThat - специальный ассерт, исполользующий матчеры.
+    механизм ассертов, основанный на JMock 1. Преимущество нового метода в том, что он более читаем за счет матчеров, которые можно расширять.
+
+
+Assume - это конструкция, позволяющая проверять корректность теста перед его выполнением.
+    assumeThat(File.separatorChar, is('/'));
