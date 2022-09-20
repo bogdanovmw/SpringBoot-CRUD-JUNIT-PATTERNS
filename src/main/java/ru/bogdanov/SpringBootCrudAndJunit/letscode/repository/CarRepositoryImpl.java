@@ -1,7 +1,9 @@
 package ru.bogdanov.SpringBootCrudAndJunit.letscode.repository;
 
+import org.springframework.stereotype.Repository;
 import ru.bogdanov.SpringBootCrudAndJunit.letscode.model.Car;
 
+@Repository
 public class CarRepositoryImpl implements CarRepository {
     @Override
     public boolean saveCar(Car car) {
